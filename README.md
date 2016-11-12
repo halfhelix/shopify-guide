@@ -10,7 +10,7 @@ A mostly reasonable approach to Shopify theme development
 - "Prefer" indicates a better option and its alternative to watch out for.
 - "Use" is a positive instruction.
 
-## High-Level Rules
+## High-Level Guidelines
 
 - Use Gulp, unless you have a good reason not to.
 - Always commit your work to git after a feature is complete
