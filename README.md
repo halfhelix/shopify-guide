@@ -5,10 +5,10 @@ A mostly reasonable approach to Shopify theme development
 
 ## A note on the language:
 
-"Avoid" means don't do it unless you have good reason.
-"Don't" means there's never a good reason.
-"Prefer" indicates a better option and its alternative to watch out for.
-"Use" is a positive instruction.
+- "Avoid" means don't do it unless you have good reason.
+- "Don't" means there's never a good reason.
+- "Prefer" indicates a better option and its alternative to watch out for.
+- "Use" is a positive instruction.
 
 ## High-Level Rules
 
@@ -29,6 +29,7 @@ A mostly reasonable approach to Shopify theme development
 
 ## Shopify Helix
 User the Shopify-Helix starterkit unless there is a good reason not to.
+
 https://github.com/halfhelix/shopify-helix
 
 - SCSS Paritials
