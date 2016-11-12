@@ -1,0 +1,31 @@
+{% comment %}
+
+	Strip one image tag out of a string of content
+	useful for descriptions that contain an image
+	and you want to remove it
+
+	usage:
+	include this snippet, passing in the content you want to strip and display
+
+	ex:
+	{% include 'strip-image' with collection.description %}
+
+{% endcomment %}
+{% if strip-image != blank %}
+	{% assign content = strip-image %}
+{% else %}
+	{% assign content = collection.description %}
+{% endif %}
+{% if content contains '<img' %}
+	{% assign content = content | split: '<img' %}
+	{% assign content = content[1] %}
+	{% assign tag_index = content | split: '>' | first %}
+	{% assign tag_index = tag_index | size | plus: 1 %}
+	{% assign content = content | slice: tag_index, 999 %}
+	{% assign content_check = content | slice: 0, 4 %}
+	{% if content_check == '</p>' %}
+		{% assign content = content | slice: 4, 999 %}
+	{% endif %}
+	{% assign content = content | replace: '<p></p>', '' %}
+{% endif %}
+{{ content }}
